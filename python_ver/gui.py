@@ -1,5 +1,7 @@
 import tkinter as tk
 import pygame.mixer as mixer
+import pygame
+import time, sys
 
 class MusicPlayer:
     def __init__(self, master):
@@ -17,11 +19,25 @@ class MusicPlayer:
         self.open_button.pack(pady=10)
 
     def open_file(self):
+        # mixer.init()
+
+
+        # mixer.music.load('debussy-clair-de-lune.mid')
+        # mixer.music.play()
+        # while mixer.music.get_busy():
+        #     pygame.time.wait(1000)
+        
+        
         print("opening file")
         file_path = tk.filedialog.askopenfilename()
         if file_path:
             mixer.init()
             mixer.music.load(file_path)
+            #mixer.music.load('debussy-clair-de-lune.mid')
+
+            mixer.music.play()
+            while mixer.music.get_busy():
+                pygame.time.wait(1000)
 
     def play_music(self):
         mixer.music.play()
