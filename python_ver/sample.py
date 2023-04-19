@@ -64,7 +64,6 @@ Opena PA stream via context manager.
 After leaving the context, everything will
 be correctly closed(Stream, PyAudio manager)            
 """
-print("chungus")
 
 CHUNK = 512
 RATE = 48000
