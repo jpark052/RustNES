@@ -4,7 +4,7 @@
 ---
 Here are some resources I consulted while trying to make some visual output working in Rust:
 
->* [https://www.egui.rs/](https://www.egui.rs/) (Spencer recommended I shold check this link to see how the visual output should be like, specifically the "Dancing Strings" demo)
+>* [https://www.egui.rs/](https://www.egui.rs/) (Spencer recommended I should check this link to see how the visual output should be like, specifically the "Dancing Strings" demo)
     
 >* [https://github.com/emilk/egui/blob/master/crates/egui_demo_lib/src/demo/dancing_strings.rs](https://github.com/emilk/egui/blob/master/crates/egui_demo_lib/src/demo/dancing_strings.rs) (Source code for the "Dancing Strings" demo)
     
