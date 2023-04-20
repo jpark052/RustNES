@@ -21,3 +21,5 @@ Here are some resources I consulted to make the visual output in Python:
 >* [https://pypi.org/project/PyAudioWPatch/](https://pypi.org/project/PyAudioWPatch/) (Tried to use this library to get the audio playing in computer apps, including the RustNES project)
     
 >* [https://github.com/s0d3s/PyAudioWPatch/blob/master/examples/pawp_record_wasapi_loopback.py](https://github.com/s0d3s/PyAudioWPatch/blob/master/examples/pawp_record_wasapi_loopback.py) (Initially used this example code from the PyAudioWPatch library as a reference to get the computer audio so it can be processed by Python) 
+
+>* [https://stackoverflow.com/questions/39658717/plot-dynamically-changing-graph-using-matplotlib-in-jupyter-notebook](https://stackoverflow.com/questions/39658717/plot-dynamically-changing-graph-using-matplotlib-in-jupyter-notebook) (Referenced this StackOverflow post to code in the visual output in the Chiptune_python.ipynb Jupyter notebook)
