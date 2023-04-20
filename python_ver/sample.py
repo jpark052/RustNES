@@ -17,8 +17,6 @@ duration = 5.0
 filename = "loopback_record.wav"
     
 
-
-
 """
 Create PyAudio instance via context manager.
 Spinner is a helper class, for `pretty` output
@@ -85,9 +83,8 @@ plt.setp(ax, xticks=[0, CHUNK, 2 * CHUNK], yticks=[-1000, 1000])
 # show the plot
 plt.show(block=False)
 
-'''
+
 frames = []
-#stream_test.start_stream()
 for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
     data = stream_test.read(512)
     frames.append(data)
@@ -96,7 +93,7 @@ for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
     line.set_ydata(result)
     fig.canvas.draw()
     fig.canvas.flush_events()
-'''
+
 
 time.sleep(duration) # Blocking execution while playing
 
