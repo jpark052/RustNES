@@ -2,8 +2,9 @@ import mido
 import pygame
 import pygame.midi
 from mido import MidiFile
-
+import midiFunctions
 import os
+
 def main():
     mid = MidiFile('midi_files\debussy-clair-de-lune.mid')
     pygame.init()

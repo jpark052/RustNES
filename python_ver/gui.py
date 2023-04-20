@@ -1,7 +1,10 @@
 import tkinter as tk
+import numpy as np
 import pygame.mixer as mixer
 import pygame
-import time, sys
+import midiFunctions
+
+# Basic GUI that Jae attempted
 
 class MusicPlayer:
     def __init__(self, master):
@@ -19,25 +22,17 @@ class MusicPlayer:
         self.open_button.pack(pady=10)
 
     def open_file(self):
-        # mixer.init()
 
-
-        # mixer.music.load('debussy-clair-de-lune.mid')
-        # mixer.music.play()
-        # while mixer.music.get_busy():
-        #     pygame.time.wait(1000)
-        
-        
-        print("opening file")
         file_path = tk.filedialog.askopenfilename()
         if file_path:
             mixer.init()
-            mixer.music.load(file_path)
-            #mixer.music.load('debussy-clair-de-lune.mid')
 
-            mixer.music.play()
-            while mixer.music.get_busy():
-                pygame.time.wait(1000)
+            # convert the midi file to np array
+            music = midiFunctions.convertMidi(file_path)
+            sound = pygame.sndarray.make_sound((music * (2**(bits-1) - 1)).astype(np.int16))
+        sound.play()
+
+        pygame.quit()
 
     def play_music(self):
         mixer.music.play()
